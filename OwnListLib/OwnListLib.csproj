@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="Class1.cs" />
+      <Compile Update="OwnList.Node.cs">
+        <DependentUpon>OwnList.cs</DependentUpon>
+      </Compile>
+      <Compile Update="ListEnumerator.cs">
+        <DependentUpon>OwnList.cs</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+</Project>
