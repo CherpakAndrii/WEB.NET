@@ -2,7 +2,7 @@
 
 public partial class OwnList<T>
 {
-    private class Node
+    public class Node
     {
         public T Data;
         public Node? Next, Previous;

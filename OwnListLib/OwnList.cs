@@ -7,8 +7,8 @@ public partial class OwnList<T> : IList<T> where T : IEquatable<T>
     private int _count;
     public int Count => _count;
 
-    private Node? _head, _tail;
-    public bool IsReadOnly { get; private set; }
+    public Node? _head, _tail;
+    public bool IsReadOnly { get; set; }
 
     public OwnList()
     {
@@ -83,6 +83,7 @@ public partial class OwnList<T> : IList<T> where T : IEquatable<T>
 
     public void Insert(int index, T item)
     {
+        if (index > _count || index < 0) throw new IndexOutOfRangeException();
         if (index == _count)
         {
             Add(item);
@@ -105,6 +106,7 @@ public partial class OwnList<T> : IList<T> where T : IEquatable<T>
 
     public void RemoveAt(int index)
     {
+        if (index < 0) throw new IndexOutOfRangeException();
         Node selected = GetNodeAtIndex(index);
         RemoveNode(selected);
     }
@@ -166,7 +168,7 @@ public partial class OwnList<T> : IList<T> where T : IEquatable<T>
     
     public void MakeReadonly() => IsReadOnly = true;
 
-    public event EventHandler OnAddElement;
-    public event EventHandler OnRemoveElement;
-    public event EventHandler OnClearList;
+    public event EventHandler? OnAddElement;
+    public event EventHandler? OnRemoveElement;
+    public event EventHandler? OnClearList;
 }

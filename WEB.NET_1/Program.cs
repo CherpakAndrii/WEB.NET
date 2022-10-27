@@ -5,9 +5,9 @@ public static class Program
     public static void Main()
     {
         OwnList<int> list = new OwnList<int>();
-        list.OnAddElement += (obj, e) => ExternalCounter++;
-        list.OnRemoveElement += (obj, e) => ExternalCounter--;
-        list.OnClearList += (obj, e) => ExternalCounter = 0;
+        list.OnAddElement += (obj, e) => Console.WriteLine("The element is added to list!");
+        list.OnRemoveElement += (obj, e) => Console.WriteLine("The element is removed from list!");
+        list.OnClearList += (obj, e) => Console.WriteLine("The list is cleared!");
         
         list.Add(5);
         Console.WriteLine("list.Add(5);");
@@ -63,13 +63,11 @@ public static class Program
 
     private static void Print(OwnList<int> list)
     {
-        Console.WriteLine("Length = "+list.Count+", counter = "+ExternalCounter);
+        Console.WriteLine("Length = "+list.Count);
         foreach (int el in list)
         {
             Console.WriteLine(el);
         }
         Console.WriteLine("\n");
     }
-
-    private static int ExternalCounter = 0;
 }

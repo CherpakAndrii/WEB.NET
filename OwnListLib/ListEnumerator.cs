@@ -4,9 +4,9 @@ namespace OwnListLib;
 
 public partial class OwnList<T>
 {
-    private class ListEnumerator : IEnumerator<T>
+    public class ListEnumerator : IEnumerator<T>
     {
-        public ListEnumerator(Node first)
+        public ListEnumerator(Node? first)
         {
             _current = new Node(default) { Next = first };
         }
@@ -30,7 +30,8 @@ public partial class OwnList<T>
 
         public void Dispose()
         {
-            
+            List<int> l = new List<int>();
+            var v = l.GetEnumerator();
         }
     }
 }

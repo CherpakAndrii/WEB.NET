@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwnListLib", "OwnListLib.csproj", "{81768BD0-4152-4650-A1B1-D17BD36E3FB0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OwnList.Test", "OwnList.Test\OwnList.Test.csproj", "{181D298E-49BB-46CF-B067-235432A5BAA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{81768BD0-4152-4650-A1B1-D17BD36E3FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81768BD0-4152-4650-A1B1-D17BD36E3FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81768BD0-4152-4650-A1B1-D17BD36E3FB0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{181D298E-49BB-46CF-B067-235432A5BAA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{181D298E-49BB-46CF-B067-235432A5BAA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{181D298E-49BB-46CF-B067-235432A5BAA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{181D298E-49BB-46CF-B067-235432A5BAA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
